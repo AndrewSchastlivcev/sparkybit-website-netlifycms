@@ -1,0 +1,27 @@
+.page-404 {
+  padding: 60px 0;
+  .background {
+    margin: 50px;
+    font-size: 370px;
+    color: black;
+    opacity: 0.1;
+
+    line-height: 0.9;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet-max) {
+  .page-404 {
+    .background {
+      font-size: 300px;
+    }
+  }
+}
+@media screen and (max-width: $breakpoint-mobile-max) {
+  .page-404 {
+    .background {
+      font-size: 90px;
+    }
+  }
+}

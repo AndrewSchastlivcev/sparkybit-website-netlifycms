@@ -1,0 +1,95 @@
+.page-services {
+  position: relative;
+  padding: 0 0 100px 0;
+  min-height: 860px;
+
+  h2 {
+    padding: 50px 0 10px 0;
+  }
+
+  .circle {
+    position: absolute;
+    z-index: -1;
+
+    &.circle-1 {
+      @include color-circle($gradient-blue-transparent, 180px);
+      top: -125px;
+      left: -42px;
+      z-index: 1;
+    }
+
+    &.circle-2 {
+      @include color-circle($gradient-blue-biege, 97px);
+      bottom: 20px;
+      left: 410px;
+    }
+
+    &.circle-3 {
+      @include color-circle($gradient-green-blue, 38px);
+      bottom: 410px;
+      right: 818px;
+    }
+  }
+
+  .service-section {
+    margin: 0 0 50px 0;
+  }
+}
+.service-background {
+  width: 100%;
+  margin: -31px 0 50px 0;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .main-container {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1439px) {
+  .circle {
+    &.circle-1 {
+      display: none;
+    }
+    &.circle-2 {
+      display: none;
+    }
+    &.circle-3 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet-max) {
+  h1 {
+    font-size: 43px;
+    line-height: 40px;
+  }
+  .page-services {
+    padding: 0px 0 0 0;
+  }
+  .service-background {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile-max) {
+  .page-services {
+    padding: 10px 0 0 0;
+    h2 {
+      font-size: 30px;
+      line-height: 39px;
+      margin: 0 0 20px;
+      letter-spacing: 1px;
+      font-weight: 700;
+      padding: 10px 0 0;
+    }
+    h3 {
+      font-size: 30px;
+      line-height: 39px;
+      margin: 0 0 20px;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+  }
+}

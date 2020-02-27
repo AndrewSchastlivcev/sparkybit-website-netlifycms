@@ -1,0 +1,139 @@
+#header {
+  position: fixed;
+  /* display: flex; */
+  width: 100%;
+  /*  flex-shrink: 0;
+  justify-content: space-between;
+  align-items: center; */
+  background: $bg-primary;
+  /* padding: 17px 360px 25px; */
+  box-shadow: 0 10px 30px 0 rgba(0, 79, 203, 0.1);
+  /*  margin: 25px 30px 80px; */
+  z-index: 9999;
+
+  .wrapper-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    /* z-index: 9999;
+  min-height: 80px; */
+    height: 80px;
+  }
+
+  .logo {
+    background: url("../img/logo/logo.svg");
+    width: 149px;
+    height: 38px;
+    text-indent: -9999px;
+    overflow: hidden;
+    margin: 0 20px 0 0;
+    cursor: pointer;
+    a {
+      display: block;
+      height: 100%;
+    }
+  }
+
+  .nav-holder {
+    .hamburger {
+      display: none;
+      font-size: 0;
+      line-height: 0;
+      outline: none;
+      .hamburger-inner,
+      .hamburger-inner:before,
+      .hamburger-inner:after {
+        background-color: #fff;
+      }
+    }
+    nav {
+      padding: 7px 0 0;
+      font: 600 14px/18px "Montserrat", "Lato", Arial, Helvetica, sans-serif;
+      text-transform: lowercase;
+      a {
+        float: left;
+        margin: 0 0 0 37px;
+        color: #fff;
+        text-decoration: none;
+
+        &.active,
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-tablet-max) {
+    margin: 0 0 40px;
+    .nav-holder {
+      transition: all 0.4s ease;
+
+      .hamburger {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        font: 900 36px/38px $font-secondary;
+        letter-spacing: 1px;
+
+        a {
+          float: none;
+          color: #938daa;
+          margin: 0 0 38px;
+          &.active,
+          &:hover {
+            color: #fff;
+            text-decoration: none;
+          }
+
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+
+      &.opened {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: $bg-primary;
+
+        .hamburger {
+          position: absolute;
+          top: 17px;
+          right: 50px;
+        }
+        nav {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-mobile-max) {
+    padding: 0px 10px;
+    height: 80px;
+
+    .nav-holder {
+      &.opened {
+        .hamburger {
+          top: 20px;
+          right: 20px;
+        }
+      }
+    }
+  }
+}

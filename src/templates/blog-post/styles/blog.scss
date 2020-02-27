@@ -1,0 +1,131 @@
+.page-blog {
+  position: relative;
+  padding: 60px 0 100px 0;
+  .circle {
+    position: absolute;
+    z-index: -1;
+
+    &.circle-1 {
+      @include color-circle($gradient-green-blue, 280px);
+      top: 685px;
+      left: -40px;
+    }
+
+    &.circle-2 {
+      @include color-circle($gradient-blue-biege, 97px);
+      top: 410px;
+      right: 340px;
+    }
+
+    &.circle-3 {
+      @include color-circle($gradient-lightblue-transparent, 38px);
+      top: 40px;
+      right: 218px;
+    }
+  }
+  .post-block {
+    display: flex;
+    //position: relative;
+    margin: 0 0 15px 0;
+    align-items: center;
+    .preview-block {
+      display: flex;
+      flex-direction: column;
+      margin: 0 20px 10px 0;
+      padding: 8px;
+      background-color: #ffff;
+      //outline: 1px solid grey;
+      //height: fit-content;
+      //-webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
+      //-moz-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
+      //box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
+      .preview {
+        display: block;
+        width: 150px;
+        /* height: 150px; */ //gatsby sharp
+      }
+      .text {
+        font-size: 14px;
+        text-align: center;
+        line-height: 1.5;
+        background-color: #271b55;
+        color: #ffffff;
+      }
+    }
+
+    .category-list {
+      display: flex;
+      flex-wrap: wrap;
+      a {
+        margin: 0 0 15px 0;
+      }
+    }
+    .content-block {
+      flex: 1 1;
+      .post-category {
+        padding: 5px 0;
+        margin: 0 15px 0 0;
+        color: #12c3cc;
+        font-size: 12px;
+        font-weight: 700;
+        &:hover {
+          color: #000;
+        }
+      }
+      .post-title {
+        color: #000;
+        &:hover {
+          color: #12c3cc;
+        }
+      }
+
+      .post-excerpt {
+        display: flex;
+      }
+    }
+  }
+}
+
+.page-post {
+  padding: 60px 0 100px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1439px) {
+  .circle {
+    &.circle-1 {
+      display: none;
+    }
+    &.circle-2 {
+      display: none;
+    }
+    &.circle-3 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile-max) {
+  .page-blog {
+    padding: 0 0 20px 0;
+
+    h3 {
+      font-size: 24px;
+      line-height: 35px;
+    }
+
+    .post-block {
+      flex-wrap: wrap;
+      justify-content: center;
+      .content-block {
+        flex-basis: 100%;
+      }
+    }
+  }
+  .page-post {
+    padding: 0 0 20px 0;
+    h1 {
+      font-size: 33px;
+      line-height: 40px;
+    }
+  }
+}

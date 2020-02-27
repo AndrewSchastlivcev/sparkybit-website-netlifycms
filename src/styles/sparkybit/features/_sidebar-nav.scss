@@ -1,0 +1,122 @@
+%list-item-stripe {
+  content: "";
+  position: absolute;
+  right: calc(100% + 15px);
+  top: 12px;
+  height: 2px;
+  background: #000;
+  transform: translateY(-50%);
+}
+
+#sidebar-nav {
+  position: fixed;
+  //top: 190px;
+  //left: 0;
+  float: left; // possible should be replaced to absolute or fixed positioning
+  width: 300px;
+  padding: 0 0 260px 85px;
+
+  font: 400 18px/22px $font-secondary;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+
+  & > select {
+    display: none;
+    width: 100%;
+    font: 18px/22px $font-secondary;
+    padding: 29px 20px;
+    color: #000;
+    background: #fff;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.06);
+    margin: 0;
+    border: none;
+    height: 80px;
+    outline: none;
+  }
+
+  a {
+    color: #ccc;
+  }
+
+  .section > .list-item {
+    position: relative;
+    margin: 0 0 22px;
+
+    &:before {
+      @extend %list-item-stripe;
+      width: 0;
+      transition: width 0.2s ease;
+    }
+
+    &.active:before {
+      width: 70px;
+    }
+
+    &.expandable {
+      margin: 0 0 16px;
+      &:not(.active):before {
+        content: "\2795";
+        width: 0;
+        left: -30px;
+        height: auto;
+        background: none;
+      }
+
+      & > a {
+        color: #000;
+      }
+    }
+  }
+
+  .section > div > a:hover,
+  .section > div.active > a {
+    color: #000;
+  }
+
+  .section > .list-item > .sub-list {
+    font-family: $font-primary;
+    margin: 0 0 40px;
+
+    & > div {
+      margin: 0 0 16px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+    .active a,
+    a:hover {
+      color: $color-link;
+    }
+  }
+
+  .section > .list-item.expandable > .sub-list {
+    opacity: 0;
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+    transition: all 0.4s ease, max-height 0.2s ease-out;
+  }
+
+  .section > .list-item.expandable.active > .sub-list {
+    opacity: 1;
+    max-height: 1000px;
+    padding: 22px 0 0;
+    margin: 0 0 40px;
+    transition: all 0.4s ease, max-height 0.4s ease-in;
+  }
+
+  @media screen and (max-width: $breakpoint-tablet-max) {
+    float: none;
+    width: auto;
+    padding: 0;
+    margin: -40px 0 20px;
+
+    & > nav {
+      display: none;
+    }
+
+    & > select {
+      display: block;
+    }
+  }
+}

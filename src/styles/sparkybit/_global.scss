@@ -1,0 +1,94 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  position: static !important;
+}
+
+body {
+  font: #{$base-font-size}/#{$base-line-height} "Montserrat", sans-serif;
+  color: $color-main;
+  letter-spacing: 0.44px;
+  height: 100vh;
+  min-width: 1024px;
+}
+
+::placeholder {
+  font-size: 16px;
+  line-height: 16px;
+  opacity: 0.5;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+textarea {
+  border: 1px solid #979797;
+  /* border-radius: 5px; */
+  background-color: #ffffff;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 12px 8px 12px 8px;
+  color: #686868;
+  outline: none;
+
+  // &:focus {
+  //   border: 2px solid #87b455;
+  //   padding: 14px 9px 14px 29px;
+  // }
+}
+
+textarea {
+  padding: 15px;
+  width: -webkit-fill-available;
+}
+
+/* wrapper */
+#wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+#wrapper > .w1,
+#wrapper > .w1 > .w2 {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+#wrapper > .w1 {
+  left: 50%;
+  display: flex;
+}
+#wrapper > .w1 > .w2 {
+  display: flex;
+  flex-direction: column;
+  left: -50%;
+  min-height: 100vh;
+}
+
+hr {
+  display: block;
+  padding: 0;
+  border: none;
+  background: #d8d8d8;
+  height: 2px;
+  margin: 30px 0;
+
+  &.lg {
+    margin: 44px 0;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet-max) {
+  body {
+    min-width: 320px;
+  }
+}

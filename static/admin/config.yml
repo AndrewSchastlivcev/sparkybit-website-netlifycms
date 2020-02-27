@@ -1,0 +1,201 @@
+backend:
+  name: git-gateway
+  # branch: master
+  branch: master
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "[skip ci] Upload “{{path}}”"
+    deleteMedia: "[skip ci] Delete “{{path}}”"
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "careers"
+    label: "Careers"
+    folder: "src/pages/careers"
+    create: true
+    identifier_field: "career ident"
+    slug: "vacancy-{{year}}-{{month}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "career-post",
+        }
+      - { label: "Vacancy name", name: "title", widget: "string" }
+      - {
+          label: Cities vacancy,
+          name: cities,
+          widget: select,
+          multiple: true,
+          options: ["Dnipro", "Kharkiv"],
+        }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      # - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
+      # - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "blog"
+    label: "Blog"
+    folder: "src/pages/blog"
+    create: true
+    slug: "blog-{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "blog-post",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      # - { label: "Description", name: "description", widget: "text" }
+      - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
+      - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/index.md"
+        label: "Home Page"
+        name: "index"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "index-page",
+            }
+            # section 1 start
+          - { label: Title, name: section_1_title, widget: string }
+          - { label: Image, name: section_1_image, widget: image }
+          - { label: BtnText, name: section_1_btn_text, widget: string }
+          - { label: Subheading, name: section_1_subheading, widget: string }
+          - { label: "Content", name: "body", widget: markdown }
+            # section 1 end
+
+            # section 2 start
+          - { label: Title, name: section_2_title, widget: string }
+          - { label: Image, name: section_2_1_image, widget: image }
+          - {
+              label: Subheading right,
+              name: section_2_right_subheading,
+              widget: string,
+            }
+          - {
+              label: Subheading right text,
+              name: section_2_right_text,
+              widget: string,
+            }
+          - { label: Image, name: section_2_2_image, widget: image }
+          - {
+              label: Subheading left,
+              name: section_2_left_subheading,
+              widget: string,
+            }
+          - {
+              label: Subheading left text,
+              name: section_2_left_text,
+              widget: string,
+            }
+            # section 2 end
+
+            # section 3 start
+          - { label: Title 3, name: section_3_title, widget: string }
+          - { label: Section 3 text, name: section_3_text, widget: string }
+          - { label: Image mobile, name: section_3_image_mobile, widget: image }
+          - {
+              label: Image desktop,
+              name: section_3_image_desktop,
+              widget: image,
+            }
+            # section 3 end
+
+      - file: "src/pages/services/index.md"
+        label: "Services"
+        name: "services"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "services-page",
+            }
+          - { label: Image, name: image, widget: image }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Subheading, name: subheading, widget: string }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - file: "src/pages/contacts/index.md"
+        label: "Contacts"
+        name: "contacts"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "contacts-page",
+            }
+          - { label: Title, name: contact_title, widget: string }
+          - { label: Email, name: contact_email, widget: string }
+          - { label: Phone, name: contact_phone, widget: string }
+          - { label: Button Name, name: btn_name, widget: string }
+          - {
+              label: Countries,
+              name: countries,
+              widget: list,
+              fields:
+                [
+                  { label: Country, name: country, widget: string },
+                  {
+                    label: Offices,
+                    name: offices,
+                    widget: list,
+                    required: false,
+                    fields:
+                      [
+                        { label: Offices Name, name: office, widget: string },
+                        {
+                          label: Latitude Office,
+                          name: latitude_office,
+                          widget: string,
+                        },
+                        {
+                          label: Longitude Office,
+                          name: longitude_office,
+                          widget: string,
+                        },
+                      ],
+                  },
+                ],
+            }
+      - file: "src/pages/about-us/index.md"
+        label: "About us"
+        name: "about-us"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "about-us-page",
+            }
+          - { label: section_1_title, name: section_1_title, widget: string }
+          - {
+              label: section_1_content,
+              name: section_1_content,
+              widget: string,
+            }
+          - { label: section_1_Image, name: section_1_image, widget: image }
+
+          - { label: section_2_text, name: section_2_text, widget: string }
+          - { label: section_2_image, name: section_2_image, widget: image }
+
+          - { label: section_3_title, name: section_3_title, widget: string }
+          - { label: section_3_text, name: section_3_text, widget: string }

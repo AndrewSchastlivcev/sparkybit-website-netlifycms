@@ -1,0 +1,110 @@
+.page-about-us {
+  position: relative;
+  padding: 60px 0;
+  .content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .circle {
+    position: absolute;
+    z-index: -1;
+
+    &.circle-1 {
+      @include color-circle($gradient-gray-white, 102px);
+      top: -1000px;
+      right: 1308px;
+    }
+
+    &.circle-3 {
+      @include color-circle($gradient-green-blue, 230px);
+      bottom: -110px;
+      left: calc(50% + 250px);
+    }
+  }
+
+  .main-visual {
+    padding: 30px 0;
+    margin: 0 0 35px;
+  }
+
+  .section-blue {
+    padding: 80px 0 60px;
+    margin: 0 0 80px;
+    background: $color-light-blue;
+    @include clearfix;
+
+    .container-sm {
+      position: relative;
+    }
+
+    .visual {
+      float: left;
+      width: 240px;
+      height: auto;
+      margin: 0 80px 20px 0;
+    }
+
+    .content {
+      margin: 0 0 -24px;
+    }
+
+    .circle-2 {
+      @include color-circle($gradient-orange-purple, 154px);
+      z-index: 1;
+      top: -200px;
+      right: -155px;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-tablet-max) {
+    .section-blue {
+      .visual {
+        float: unset;
+      }
+    }
+    .section-blue {
+      .visual {
+        margin: 0 auto;
+        display: block !important;
+      }
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-mobile-max) {
+    padding: 0 0 20px;
+    h1 {
+      font-size: 33px;
+      padding: 30px 0 0;
+    }
+    h2 {
+      font-size: 25px;
+      line-height: 36px;
+    }
+    .circle {
+      &.circle-1 {
+        display: none;
+      }
+      &.circle-3 {
+        z-index: 1;
+        left: auto;
+        bottom: 35%;
+        right: -60px;
+      }
+    }
+
+    .main-visual {
+      padding: 0;
+      margin: 0 0 65px;
+    }
+
+    .section-blue {
+      padding: 65px 0;
+      margin: 0 0 50px;
+      .circle-2,
+      .visual {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,178 @@
+.page-vacancy {
+  position: relative;
+  padding: 60px 0 100px 0;
+  .circle {
+    position: absolute;
+    z-index: -1;
+
+    &.circle-1 {
+      @include color-circle($gradient-green-blue, 280px);
+      top: 685px;
+      left: -40px;
+    }
+
+    &.circle-2 {
+      @include color-circle($gradient-blue-biege, 97px);
+      top: 410px;
+      right: 340px;
+    }
+
+    &.circle-3 {
+      @include color-circle($gradient-lightblue-transparent, 38px);
+      top: 40px;
+      right: 218px;
+    }
+  }
+  .vacancy-block {
+    display: flex;
+    margin: 0 0 20px 0;
+    align-items: center;
+    h4 {
+      font-size: 20px;
+    }
+    .vacancy-list {
+      display: flex;
+      .vacancy-image {
+        width: 150px;
+        min-width: 150px;
+        margin-right: 30px;
+      }
+      .vacancy-wrap-right {
+        .vacancy-wrap-title {
+          display: flex;
+          flex-wrap: wrap;
+          // margin-bottom: 20px;
+          .vacancy-title {
+            margin: 0 40px 0 0px;
+            color: #000;
+            &:hover {
+              color: #12c3cc;
+            }
+          }
+        }
+        .vacancy-skills {
+          margin-bottom: 20px;
+          h4 {
+            margin-bottom: 5px;
+          }
+          svg {
+            margin-right: 5px;
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+    .feedback {
+      .feedback-image {
+        margin: 0 10px 0 0;
+        vertical-align: middle;
+        width: 20px;
+      }
+    }
+    .content-block {
+      flex: 1 1;
+      margin: 0 0 25px 0;
+      .vacancy-city {
+        cursor: default;
+        padding: 5px 10px;
+        color: #12c3cc;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .about-project {
+        margin: 0 0 20px 0;
+        .vacancy-about-title {
+          font-size: 16px;
+          opacity: 0.6;
+          letter-spacing: 0;
+          padding: 10px 0 5px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .vacancy-count {
+    background-color: $color-link;
+    color: $color-light-blue;
+    margin: 0 0 0 10px;
+    border-radius: 50%;
+    width: 30px;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    top: 20px;
+    font-size: 25px;
+    left: 180px;
+  }
+}
+.post-vacancy {
+  padding: 60px 0 100px 0;
+  h1 {
+    margin-bottom: 10px;
+  }
+  .vacancy-skills {
+    margin-bottom: 30px;
+    h4 {
+      margin-bottom: 5px;
+    }
+    svg {
+      margin-right: 15px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .feedback {
+    .feedback-image {
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+      width: 20px;
+    }
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 1439px) {
+  .circle {
+    &.circle-1 {
+      display: none;
+    }
+    &.circle-2 {
+      display: none;
+    }
+    &.circle-3 {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: $breakpoint-mobile-max) {
+  .page-vacancy {
+    padding: 0 0 20px 0;
+    h3 {
+      font-size: 24px;
+      line-height: 35px;
+    }
+    h1 {
+      font-size: 33px;
+      line-height: 40px;
+    }
+
+    .vacancy-block {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0;
+      .content-block {
+        flex-basis: 100%;
+        .vacancy-list {
+          flex-wrap: wrap;
+          justify-content: center;
+          .vacancy-image {
+            margin: 0 0 20px 0;
+          }
+        }
+      }
+    }
+  }
+}

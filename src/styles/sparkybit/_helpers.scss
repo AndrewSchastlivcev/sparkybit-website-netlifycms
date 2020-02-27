@@ -1,0 +1,56 @@
+.container,
+.wrapper-header {
+  max-width: $container-width;
+  margin: 0 auto;
+
+  @media screen and (max-width: $breakpoint-tablet-max) {
+    max-width: none;
+    padding-left: $mobile-content-offset;
+    padding-right: $mobile-content-offset;
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1439px) {
+    padding: 0 40px;
+  }
+}
+
+.container-sm {
+  @extend .container;
+  max-width: $container-sm-width;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+
+.img-rounded {
+  display: block;
+  border-radius: 50%;
+}
+
+.img-block {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}

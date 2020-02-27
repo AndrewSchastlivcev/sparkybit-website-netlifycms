@@ -1,0 +1,126 @@
+.section-greeter {
+  position: relative;
+  padding: 140px 0 110px;
+  margin: -5px 0 0;
+
+  .content {
+    max-width: 570px;
+  }
+
+  .main_background {
+    top: -25px;
+    left: 60%;
+    position: absolute !important;
+    height: 850px;
+    width: 70%;
+  }
+
+  .heading {
+    /* margin: 0 0 18px; */
+    letter-spacing: 0;
+  }
+
+  .description-wrap {
+    margin: 0 0 45px;
+
+    p:last-child {
+      margin: 0;
+    }
+  }
+
+  .circle {
+    position: absolute;
+    z-index: -1;
+  }
+
+  .circle-1 {
+    top: 240px;
+    right: 1350px;
+    @include color-circle($gradient-green-blue, 239px);
+  }
+
+  .circle-2 {
+    top: 60px;
+    left: 563px;
+    @include color-circle($gradient-gray, 23px);
+  }
+
+  .circle-3 {
+    top: -65px;
+    left: 50%;
+  }
+
+  .circle-4 {
+    top: 442px;
+    right: 50px;
+    @include color-circle($gradient-gray, 26px);
+  }
+
+  .circle-5 {
+    left: -93px;
+    bottom: 277px;
+    @include color-circle($gradient-green-pink, 59px);
+  }
+
+  .circle-6 {
+    left: 387px;
+    bottom: 190px;
+    @include color-circle($gradient-gray, 16px);
+  }
+
+  .circle-7 {
+    left: -180px;
+    bottom: 130px;
+    @include color-circle($gradient-orange-purple, 113px);
+  }
+
+  @media screen and (max-width: $breakpoint-tablet-max) {
+    padding: 30px 0 110px;
+    .main_background {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-mobile-max) {
+    padding: 0 0 65px;
+    .content {
+      margin: 0;
+    }
+
+    .heading {
+      font-size: 33px;
+      line-height: 45px;
+    }
+
+    .circle-1 {
+      top: -190px;
+      left: auto;
+      right: -115px;
+    }
+
+    .circle-2,
+    .circle-3,
+    .circle-4,
+    .circle-5,
+    .circle-6 {
+      display: none;
+    }
+
+    .circle-7 {
+      left: auto;
+      right: -90px;
+    }
+  }
+}
+
+.container > .section-greeter > .content {
+  @media screen and (max-width: $breakpoint-tablet-max) {
+    /* max-width: 380px; */
+    max-width: 900px;
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1439px) {
+    max-width: 550px;
+    /*  margin: 145px 600px 0 0; */
+  }
+}

@@ -1,0 +1,142 @@
+.section-services {
+  padding: 107px 0 170px;
+  background: $color-light-blue;
+
+  .services {
+    padding: 70px 0 0;
+
+    .service {
+      position: relative;
+      @include clearfix;
+      .content {
+        position: relative;
+        width: 550px;
+
+        .more-holder {
+          @include clearfix;
+          margin: -9px 0 0;
+        }
+      }
+
+      &.salesforce {
+        padding: 45px 0 85px;
+        .circle {
+          position: absolute;
+
+          &.circle-1 {
+            top: 0;
+            left: 0;
+            display: block;
+          }
+
+          &.circle-2 {
+            top: 300px;
+            left: 270px;
+            @include color-circle($gradient-blue-biege, 90px);
+          }
+        }
+      }
+      &.bespoke {
+        padding: 124px 0 0;
+
+        .circle {
+          position: absolute;
+
+          &.circle-1 {
+            top: 0;
+            right: -145px;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-tablet-max) {
+    .services {
+      .service {
+        &.salesforce {
+          .circle {
+            &.circle-1 {
+              display: block;
+              top: 35px;
+              left: 0;
+            }
+            .gatsby-image-wrapper {
+              width: 150px !important;
+              height: 150px !important;
+            }
+
+            &.circle-2 {
+              display: block;
+            }
+          }
+        }
+        &.bespoke {
+          .circle {
+            &.circle-1 {
+              display: block;
+              top: 120px;
+              right: 45px;
+            }
+            .gatsby-image-wrapper {
+              width: 150px !important;
+              height: 150px !important;
+            }
+
+            &.circle-2 {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-mobile-max) {
+    padding: 65px 0;
+
+    h1 {
+      font-size: 33px;
+      line-height: 45px;
+    }
+
+    .services {
+      padding: 0;
+      .service {
+        .content {
+          float: none;
+          width: 100%;
+        }
+
+        &.salesforce {
+          padding: 30px 0 0px;
+
+          .circle {
+            &.circle-1 {
+              display: none;
+            }
+
+            &.circle-2 {
+              display: none;
+            }
+          }
+        }
+
+        &.bespoke {
+          padding: 30px 0 0;
+
+          .heading {
+            width: 40%;
+          }
+
+          .circle {
+            &.circle-1 {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

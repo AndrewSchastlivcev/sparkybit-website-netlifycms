@@ -1,0 +1,46 @@
+.btn {
+  font: 600 12px/15px $font-secondary;
+  text-transform: uppercase;
+  padding: 20px 28px;
+  margin: 0;
+  color: #fff;
+  border-radius: 54px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: 2.2px;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.btn-primary {
+    background: $color-link;
+    color: #fff;
+    &:active {
+      background: $color-link-hover;
+      color: #fff;
+    }
+  }
+}
+
+.link-more {
+  position: relative;
+  padding: 0 50px 0 0;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: url("../img/arrow.svg") no-repeat;
+    width: 40px;
+    height: 20px;
+  }
+
+  &:hover {
+    color: $color-link;
+    text-decoration: underline;
+  }
+}

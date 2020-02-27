@@ -1,0 +1,55 @@
+$font-secondary: "Montserrat", sans-serif;
+$font-primary: "Montserrat", sans-serif;
+
+$base-font-size: 18px;
+$base-line-height: 1.8;
+
+$bg-primary: #271b55;
+
+$color-main: #271b55;
+$color-secondary: #323232;
+$color-link: #12c3cc;
+$color-link-hover: darken($color-link, 20%);
+$color-gray: rgba(0, 0, 0, 0.3);
+$color-light-blue: #f9fbff;
+
+$breakpoint-desktop: 1024px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;
+
+$mobile-content-offset: 20px;
+
+$breakpoint-tablet-max: $breakpoint-desktop - 1;
+$breakpoint-mobile-max: $breakpoint-tablet - 1;
+
+$container-width: 1200px;
+$container-sm-width: 780px;
+
+$gradient-green-blue: linear-gradient(
+  130deg,
+  rgba(149, 249, 198, 1) 0%,
+  rgba(137, 218, 252, 1) 100%
+);
+$gradient-gray: linear-gradient(-141deg, #f5f7fa 0%, #e9edf2 100%);
+$gradient-green-pink: linear-gradient(130deg, #afebe9 0%, #f8d8e3 100%);
+$gradient-orange-purple: linear-gradient(
+  310deg,
+  #f9ddae 0%,
+  #ed92ab 50%,
+  #866aaf 100%
+);
+$gradient-blue-biege: linear-gradient(39deg, #fff1eb 7%, #ace0f9 95%);
+$gradient-lightblue-transparent: linear-gradient(
+  -156deg,
+  #ebecff 0%,
+  rgba(172, 224, 249, 0) 99%
+);
+$gradient-gray-white: linear-gradient(31deg, #f5f7fa 4%, #c3cfe2 100%);
+$gradient-lightblue-blue: linear-gradient(-156deg, #00f1fe 0%, #4daefe 100%);
+$gradient-blue-transparent: linear-gradient(
+  -91deg,
+  #ffffff 0%,
+  #00f1fe 50%,
+  #4daefe 84%
+);
+$gradient-green-blue: linear-gradient(310deg, #84fab0 0%, #8fd3f4 100%);

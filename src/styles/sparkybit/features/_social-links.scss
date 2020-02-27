@@ -1,0 +1,46 @@
+.social-links {
+  font-size: 0;
+  line-height: 0;
+  a {
+    display: inline-block;
+    vertical-align: middle;
+    text-indent: -9999px;
+    overflow: hidden;
+    margin: 0 0 0 23px;
+    width: 15px;
+    height: 15px;
+
+    &:first-child {
+      margin: 0;
+    }
+
+    &.fb {
+      background: url("../img/social_icons/facebook.svg") no-repeat;
+      width: 8px;
+      height: 17px;
+      &.gray {
+        background: url("../img/social_icons/facebook-gray.svg")
+          no-repeat;
+      }
+    }
+
+    &.tw {
+      background: url("../img/social_icons/twitter.svg") no-repeat;
+      width: 15px;
+      height: 13px;
+      &.gray {
+        background: url("../img/social_icons/twitter-gray.svg") no-repeat;
+      }
+    }
+    &.ln {
+      background: url("../img/social_icons/linkedin.svg") no-repeat;
+      width: 16px;
+      height: 17px;
+    }
+    &.in {
+      background: url("../img/social_icons/instagram.svg") no-repeat;
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
