@@ -43,16 +43,6 @@ class BlogRoll extends React.Component {
                       <span className="text">{post.frontmatter.date}</span>
                     </div>
                     <div className="content-block">
-                      {/* <div className="category-list">
-                      {post.frontmatter.tags.map((category, index) => (
-                        <Link
-                          key={category + `-${index}`}
-                          to={`/tags/${kebabCase(category)}`}
-                        >
-                          <span className="post-category">{category}</span>
-                        </Link>
-                      ))}
-                    </div> */}
                       <Link to={post.fields.slug}>
                         <h3 className="post-title">{post.frontmatter.title}</h3>
                       </Link>

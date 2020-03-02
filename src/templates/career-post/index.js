@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import Content, { HTMLContent } from "../../components/Content";
-import IconEnvelope from "../../../src/img/icon-message.svg";
+import IconEnvelope from "../../../src/img/icon-message-white.svg";
 import ModalContact from "../../components/modal-contact";
 import SEO from "../../components/seo/index";
 import "./styles/index.scss";
