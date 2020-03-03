@@ -5,7 +5,7 @@ const config = {
   organization: "Sparkybit", // Organization name for schema.org SEO
   author: "Sparkybit Team", // Username to display in the author segment.
   siteLogo: "../img/favicon-96x96.png", // Logo used for SEO and manifest.
-  siteUrl: "http://sparkybit.com", // Domain of your website without pathPrefix.
+  siteUrl: "https://sparkybit.com", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   blogPrefix: "/blog", // Blog path prefix
   ampPrefix: "/amp/",

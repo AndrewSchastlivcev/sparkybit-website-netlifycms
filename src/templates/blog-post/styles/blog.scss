@@ -25,7 +25,6 @@
   }
   .post-block {
     display: flex;
-    //position: relative;
     margin: 0 0 15px 0;
     align-items: center;
     .preview-block {
@@ -34,15 +33,9 @@
       margin: 0 20px 10px 0;
       padding: 8px;
       background-color: #ffff;
-      //outline: 1px solid grey;
-      //height: fit-content;
-      //-webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
-      //-moz-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
-      //box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.5);
       .preview {
         display: block;
         width: 150px;
-        /* height: 150px; */ //gatsby sharp
       }
       .text {
         font-size: 14px;

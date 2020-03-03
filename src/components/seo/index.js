@@ -78,19 +78,10 @@ function SEO({ description, lang, meta, keywords, title, pageMeta }) {
             meta={[
               /* General tags */
               { name: `description`, content: metaDescription },
-              // { name: `image`, content: image },
-              /* OpenGraph tags */
               { property: `og:url`, content: pageUrl },
               { property: `og:title`, content: title },
               { property: `og:description`, content: metaDescription },
-              // { property: `og:image`, content: image },
               { property: `og:type`, content: `website` }
-              /* Twitter Card tags */
-              // { name: `twitter:card`, content: `summary_large_image` },
-              // { name: `twitter:creator`, content: site.siteMetadata.author },
-              // { name: `twitter:title`, content: title },
-              // { name: `twitter:description`, content: metaDescription },
-              // { name: `twitter:image`, content: image }
             ]
               .concat(
                 pageMeta ? { property: `og:type`, content: `article` } : []

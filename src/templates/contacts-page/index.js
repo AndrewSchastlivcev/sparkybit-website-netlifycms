@@ -135,4 +135,3 @@ export const ContactsPageQuery = graphql`
     }
   }
 `;
-/* eslint-disable */

@@ -192,11 +192,6 @@
         .btn {
           padding: 18px 27px;
         }
-
-        .heading {
-          /*  margin: 0 40px 0 0; */
-        }
-
         .social-links {
           a {
             background-size: cover;
@@ -315,7 +310,6 @@
   }
 
   .field-input {
-    //width: 45%;
     display: flex;
     flex-direction: column;
     margin: 0 0 10px;
@@ -343,8 +337,6 @@
     outline: none;
   }
   .modal-recaptcha {
-    //transform: scale(1);
-    //tratransform-origin: 0 0;
     margin: 0 0 10px 0;
   }
 
@@ -368,7 +360,6 @@
 
   .submitBtn {
     width: 200px;
-    //margin: 0 auto;
     display: block;
     margin: 0 2px;
   }
@@ -399,7 +390,6 @@
   .label {
     font-weight: bold;
     display: block;
-    //margin-bottom: 0.5rem;
   }
 
   .error .label {
@@ -415,9 +405,7 @@
   .error .input-feedback {
     color: red;
   }
-
-  ////
-
+  
   @media screen and (max-width: $breakpoint-mobile) {
     .modal-fields {
       .field-input {
