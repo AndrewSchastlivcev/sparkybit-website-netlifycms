@@ -1,24 +1,24 @@
 import React, { Component } from "react";
 import { v4 } from "uuid";
 
-export default class Countries extends Component {
+export default class CountriesSelector extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      country: props.countries[0]
+      country: props.countriesList[0]
     };
   }
 
-  setCountry(event, country) {
+  selectCountry(event, country) {
     event.preventDefault();
     this.setState({ country });
-    this.props.getCountry(country);
+    this.props.setCountry(country);
   }
   render() {
-    const { countries } = this.props;
+    const { countriesList } = this.props;
     return (
       <ul className="contact-list">
-        {countries.map(c => {
+        {countriesList.map(c => {
           return (
             <li
               key={v4()}
@@ -29,8 +29,8 @@ export default class Countries extends Component {
               <span
                 role="button"
                 tabIndex={0}
-                onClick={e => this.setCountry(e, c)}
-                onKeyDown={e => this.setCountry(e, c)}
+                onClick={e => this.selectCountry(e, c)}
+                onKeyDown={e => this.selectCountry(e, c)}
               >
                 {c.country}
               </span>

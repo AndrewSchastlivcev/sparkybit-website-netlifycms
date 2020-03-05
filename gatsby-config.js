@@ -1,5 +1,15 @@
 const urlJoin = require("url-join");
 const config = require("./src/config/website");
+
+//dot ENV config // working with .env package  
+let activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
+
+require("dotenv").config({
+  path: `.env.${activeEnv}`
+});
+console.log('\x1b[33m%s\x1b[0m', `>>> Using environment config: '${activeEnv}'`);
+
 module.exports = {
   pathPrefix: config.pathPrefix === "" ? "/" : config.pathPrefix,
   siteMetadata: {
@@ -61,7 +71,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // replace "UA-XXXXXXXXX-X" with your own Tracking ID
-        trackingId: config.googleAnalyticsID
+        //trackingId: config.googleAnalyticsID
+        trackingId: process.env.GATSBY_GA_ID
       }
     },
     "gatsby-plugin-remove-generator",

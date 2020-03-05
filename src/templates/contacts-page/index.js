@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
-import Countries from "../../components/Countries";
+import CountriesSelector from "../../components/CountriesSelector";
 import IconEnvelope from "../../../src/img/icon-message.svg";
 import IconTel from "../../../src/img/icon-tel.svg";
 import LeafletMap from "../../components/leaflet-map/index.js";
@@ -14,12 +14,12 @@ import "./styles/index.scss";
 export class ContactsPageTemplate extends Component {
   constructor(props) {
     super(props);
-    this.state = { country: this.props.countries[0], isModalOpen: false };
+    this.state = { country: this.props.countriesList[0], isModalOpen: false };
     this.setModalState = this._setModalState.bind(this);
     this.handleFormSubmit = this._handleFormSubmit.bind(this);
   }
 
-  getCountry = value => {
+  setCountry = value => {
     this.setState({ country: value });
   };
 
@@ -41,7 +41,7 @@ export class ContactsPageTemplate extends Component {
       contact_email,
       contact_phone,
       btn_name,
-      countries
+      countriesList
     } = this.props;
     return (
       <>
@@ -50,7 +50,7 @@ export class ContactsPageTemplate extends Component {
           <div className="page-contacts container">
             <div className="content">
               <h1 className="h2 heading striped uppercase">{contact_title}</h1>
-              <Countries countries={countries} getCountry={this.getCountry} />
+              <CountriesSelector countriesList={countriesList} setCountry={this.setCountry} />
               <div className="contacts">
                 <div className="email">
                   <img src={IconEnvelope} alt="contact email" />
@@ -79,8 +79,8 @@ export class ContactsPageTemplate extends Component {
             </div>
             <div className="map">
               <LeafletMap
-                countries={this.state.country}
-                getCountry={this.getCountry}
+                country={this.state.country}
+                getCountry={this.setCountry}
               />
             </div>
             <div className="circle circle-1" />
@@ -107,7 +107,7 @@ const ContactsPage = ({ data }) => {
         contact_email={post.frontmatter.contact_email}
         contact_phone={post.frontmatter.contact_phone}
         btn_name={post.frontmatter.btn_name}
-        countries={post.frontmatter.countries}
+        countriesList={post.frontmatter.countries}
       />
     </Layout>
   );

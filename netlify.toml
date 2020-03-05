@@ -5,5 +5,5 @@
 [build.environment]
   YARN_FLAGS = "--no-ignore-optional" 
   NODE_ENV = "production"
-  NODE_VERSION = "12.14.0"
+  NODE_VERSION = "12.16.1"
   YARN_VERSION = "1.22.0"

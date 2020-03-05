@@ -2,16 +2,7 @@ const _ = require("lodash");
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 const { fmImagesToRelative } = require("gatsby-remark-relative-images");
-
-//dot ENV config // working with .env package
-let activeEnv =
-  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development";
-
-console.log(`Using environment config: '${activeEnv}'`);
-
-require("dotenv").config({
-  path: `.env.${activeEnv}`
-});
+  
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
