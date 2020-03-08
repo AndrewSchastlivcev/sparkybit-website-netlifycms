@@ -1,0 +1,43 @@
+{
+  "name": "gatsby-plugin-amp4html",
+  "version": "0.7.0",
+  "description": "convert html to amp pages",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint *.js",
+    "test": "npm run lint"
+  },
+  "engines": {
+    "node": ">= 10.16.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomoyukikashiro/gatsby-plugin-html2amp.git"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "amp"
+  ],
+  "homepage": "https://github.com/tomoyukikashiro/gatsby-plugin-html2amp#readme",
+  "bugs": {
+    "url": "https://github.com/tomoyukikashiro/gatsby-plugin-html2amp/issues"
+  },
+  "author": "Schastlivcev Andrii",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "cheerio": "^1.0.0-rc.3",
+    "fs-extra": "^8.1.0",
+    "globby": "^10.0.1",
+    "slash": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}

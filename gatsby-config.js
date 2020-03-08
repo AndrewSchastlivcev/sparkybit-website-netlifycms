@@ -135,6 +135,19 @@ module.exports = {
       }
     },
     {
+      resolve: require.resolve(`./src/plugins/gatsby-plugin-amp4html`),
+      options: {
+        htmlFiles: [`**/*.html`],
+        cssFiles: [`**/*.css`],
+        publicDir: `public`,
+        fonts: {
+          fontFamily: "Montserrat",
+          fontWeight: [400, 600, 700, 800, 900],
+          awesomeIcons: true,
+        },
+      },
+    },
+    {
       resolve: "gatsby-plugin-netlify-cms",
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`
