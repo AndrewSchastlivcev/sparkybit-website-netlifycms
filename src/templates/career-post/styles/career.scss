@@ -41,7 +41,6 @@
         .vacancy-wrap-title {
           display: flex;
           flex-wrap: wrap;
-          // margin-bottom: 20px;
           .vacancy-title {
             margin: 0 40px 0 0px;
             color: #000;
@@ -69,7 +68,7 @@
         margin: 0 10px 0 0;
         vertical-align: middle;
         width: 20px;
-      }
+      }      
     }
     .content-block {
       flex: 1 1;
@@ -131,6 +130,9 @@
       margin: 0 10px 0 0;
       vertical-align: middle;
       width: 20px;
+    }
+    .feedback-title {
+      vertical-align: middle;
     }
   }
 }

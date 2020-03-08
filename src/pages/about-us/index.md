@@ -1,6 +1,6 @@
 ---
 templateKey: about-us-page
-section_1_title: ABOUT US
+section_1_title: About us
 section_1_content: >-
   Sparkybit is the creation of Alexey Nayda, an entrepreneur born and raised in
   the Ukraine. It has been his passion to work with clients to develop that

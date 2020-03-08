@@ -4,6 +4,7 @@ import Layout from "../../components/Layout";
 import Img from "gatsby-image/withIEPolyfill";
 import Content, { HTMLContent } from "../../components/Content";
 import ModalContact from "../../components/modal-contact";
+import Picture from "../../components/react-picturefill";
 
 import SEO from "../../components/seo/index";
 
@@ -44,13 +45,13 @@ export class IndexPageTemplate extends Component {
       section_2_2_image,
       section_3_title,
       section_3_text,
-      // section_3_image_mobile,
+      section_3_image_mobile,
       section_3_image_desktop
     } = this.props;
     const { isModalOpen } = this.state;
     const { setModalState, handleFormSubmit } = this;
     const MainPageContent = contentComponent || Content;
-
+   
     return (
       <>
         <SEO title="Home" description={content} />
@@ -165,7 +166,7 @@ export class IndexPageTemplate extends Component {
                 <h1 className="striped uppercase">{section_3_title}</h1>
                 <p>{section_3_text}</p>
                 <div className="technologies">
-                  {!!section_3_image_desktop.childImageSharp ? (
+                  {/* {!!section_3_image_desktop.childImageSharp ? (
                     <Img
                       fluid={section_3_image_desktop.childImageSharp.fluid}
                       alt={section_3_title}
@@ -173,7 +174,39 @@ export class IndexPageTemplate extends Component {
                     />
                   ) : (
                     <img src={section_3_image_desktop} alt={section_3_title} />
-                  )}
+                  )} */}
+                  <Picture
+                      sources={[
+                        {
+                          type: "image/webp",
+                          srcSet:
+                            section_3_image_mobile
+                              .childImageSharp.fixed.srcSetWebp,
+                          media: "(max-width: 767px)",
+                        },
+                        {
+                          srcSet:
+                            section_3_image_mobile
+                              .childImageSharp.fixed.srcSet,
+                          media: "(max-width: 767px)",
+                        },
+                        {
+                          type: "image/webp",
+                          srcSet:
+                            section_3_image_desktop
+                              .childImageSharp.fluid.srcSetWebp,
+                        },
+                        {
+                          srcSet:
+                            section_3_image_desktop
+                              .childImageSharp.fluid.srcSet,
+                        },
+                      ]}
+                      src={
+                        section_3_image_desktop.childImageSharp
+                          .fluid.src
+                      }
+                    />
                 </div>
               </div>
             </section>
@@ -210,7 +243,7 @@ const IndexPage = ({ data }) => {
         section_3_title={post.frontmatter.section_3_title}
         section_3_text={post.frontmatter.section_3_text}
         section_3_image_desktop={post.frontmatter.section_3_image_desktop}
-        // section_3_image_mobile={post.frontmatter.section_3_image_mobile}
+        section_3_image_mobile={post.frontmatter.section_3_image_mobile}
       />
     </Layout>
   );
@@ -257,14 +290,14 @@ export const pageQuery = graphql`
         section_3_image_desktop {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 80) {
-              ...GatsbyImageSharpFluid_tracedSVG
+              ...GatsbyImageSharpFluid
             }
           }
         }
         section_3_image_mobile {
           childImageSharp {
             fixed(quality: 60, width: 395, height: 1361) {
-              ...GatsbyImageSharpFixed_tracedSVG
+              ...GatsbyImageSharpFixed
             }
           }
         }

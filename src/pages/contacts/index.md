@@ -1,6 +1,6 @@
 ---
 templateKey: contacts-page
-contact_title: CONTACTS
+contact_title: Contacts
 contact_email: hi@sparkybit.com
 contact_phone: +44 20 3773 8945
 btn_name: CONTACT US

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
-// import { Link, useStaticQuery, graphql } from "gatsby";
 import classNames from "classnames";
 
 export default props => {

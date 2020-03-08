@@ -4,7 +4,6 @@ import { Link, graphql, StaticQuery } from "gatsby";
 import PostPreviewImg from "../img/blog/default-preview.jpg";
 import Img from "gatsby-image/withIEPolyfill";
 import SEO from "../components/seo/index";
-// import { kebabCase } from "lodash";
 
 class BlogRoll extends React.Component {
   render() {
@@ -43,16 +42,6 @@ class BlogRoll extends React.Component {
                       <span className="text">{post.frontmatter.date}</span>
                     </div>
                     <div className="content-block">
-                      {/* <div className="category-list">
-                      {post.frontmatter.tags.map((category, index) => (
-                        <Link
-                          key={category + `-${index}`}
-                          to={`/tags/${kebabCase(category)}`}
-                        >
-                          <span className="post-category">{category}</span>
-                        </Link>
-                      ))}
-                    </div> */}
                       <Link to={post.fields.slug}>
                         <h3 className="post-title">{post.frontmatter.title}</h3>
                       </Link>

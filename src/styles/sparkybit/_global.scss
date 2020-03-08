@@ -32,18 +32,12 @@ input[type="url"],
 input[type="search"],
 textarea {
   border: 1px solid #979797;
-  /* border-radius: 5px; */
   background-color: #ffffff;
   font-size: 16px;
   line-height: 16px;
   padding: 12px 8px 12px 8px;
   color: #686868;
   outline: none;
-
-  // &:focus {
-  //   border: 2px solid #87b455;
-  //   padding: 14px 9px 14px 29px;
-  // }
 }
 
 textarea {

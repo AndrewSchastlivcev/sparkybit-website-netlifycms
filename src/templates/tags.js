@@ -63,9 +63,6 @@ class TagRoute extends Component {
               <div className="circle circle-1" />
               <div className="circle circle-2" />
               <div className="circle circle-3" />
-              {/* <p>
-                <Link to="/tags/">Browse all tags</Link>
-              </p> */}
               <p>
                 <Link to="/blog/">Return to blogs</Link>
               </p>

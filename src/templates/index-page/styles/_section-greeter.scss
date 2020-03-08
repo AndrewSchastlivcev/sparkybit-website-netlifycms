@@ -16,7 +16,6 @@
   }
 
   .heading {
-    /* margin: 0 0 18px; */
     letter-spacing: 0;
   }
 
@@ -115,12 +114,10 @@
 
 .container > .section-greeter > .content {
   @media screen and (max-width: $breakpoint-tablet-max) {
-    /* max-width: 380px; */
     max-width: 900px;
   }
 
   @media screen and (min-width: 1024px) and (max-width: 1439px) {
     max-width: 550px;
-    /*  margin: 145px 600px 0 0; */
   }
 }
