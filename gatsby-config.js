@@ -25,14 +25,14 @@ module.exports = {
       resolve: `gatsby-plugin-recaptcha`
     },
     "gatsby-plugin-sass",
-    /* {
+    {
       resolve: "gatsby-plugin-purgecss", // purges all unused/unreferenced css rules
       options: {
         develop: true, // Activates purging in npm run develop
         purgeOnly: ["styles/", "templates/"], // applies purging only on the bulma css file
         ignore: ["templates/contacts-page"]
       }
-    }, // must be after other CSS plugins */
+    }, // must be after other CSS plugins
     {
       resolve: "gatsby-plugin-manifest",
       options: {
