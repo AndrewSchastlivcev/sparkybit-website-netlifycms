@@ -9,109 +9,80 @@ tags:
 ---
 Hello, reader!
 
-In this article we will focus on preparing for one of the most popular certifications for western market: Sales Cloud Consultant. Let's take a brief look at what Sales Cloud is and why this certification is considered one of the most relevant by western recruiting sites.
+If you ever thought about whether to get the status of a certified Consultant for Service Cloud, then this article is a short overview of those issues that you should pay attention to.
 
+#### **What fantastic beast are you, Service Cloud?**
+
+Salesforce Service Cloud is the cloud solution for managing and organizing work processes in service offices, places and centers. And a “bit” more. More - in the sense of managing and organizing any processes related to everything that belongs to scary words like Support, Call/Contact center.\
 \
-Salesforce Sales Cloud is an online system for managing business processes, customer relations, analytics, marketing and sales. Salesforce developers understand that for successful sales it’s not enough to have good management - you need a large-scale CRM system that works on any device with convenient access to Chatter, CRM, custom applications and the entire flow of business processes. The service allows you to create and configure any applications, deploy the necessary functionality and manage the company's budget.
+According to [the official document](https://trailhead.salesforce.com/help?article=Salesforce-Certified-Service-Cloud-Consultant-Exam-Guide) provided by Salesforce, all exam questionsare divided into several thematic blocks:
 
-\
-According to the product description, it becomes clear why Sales Cloud certification has a high value in the western market. Knowledge in this area will allow you to manage it and be a sought-after specialist. A prerequisite is a condition of having an admin certificate.\
-Now let's actually proceed to the preparation for certification. In my case, preparation for the exam took about 1 month of real time.\
-The Salesforce Sales Cloud Consultant exam measures candidate’s knowledge and skills related to the following objectives. A candidate should have hands-on experience implementing Sales Cloud solutions and have demonstrated the application of each of the features/functions below:
+* Industry Knowledge:10%
+* Implementation Strategies:15%
+* Service Cloud Solution Design:16%
+* Knowledge Management:9%
+* Interaction Channels:10%
+* Case Management:15%
+* Contact Center Analytics:5%
+* Integration and Data Management:5%
+* Service Console:15%
 
-**Industry Knowledge: 7%**
+You have 105 minutes for the whole exam. The price for the first attempt is 200 USD and respectively 100 USD for each next.
 
-**Implementation Strategies: 12%**
+From my personal experience of preparation for obtaining this certificate, the official trailmix turned out to be very very[ useful](https://trailhead.salesforce.com/users/strailhead/trailmixes/prepare-for-your-salesforce-service-cloud-consultant-credential).
 
-**Sales Cloud Solution Design: 21%**
+##### **What points you should especially pay attention to:**
 
-**Marketing and Leads: 8%**
+KPIs and metrics(a series of questions, which solutions from the proposed list should be applied to increase one or another indicator of the Call Center performance in general or an individual agent in particular; such questions will most likely be present at your exam). In the official trail mix, part of these indicators is considered directly in the thematic modules, you will have to guess the part from the context. It is also very useful to get acquainted with the tools for enhancing these same KPIs & metrics.
 
-**Account and Contact Management: 13%**
+Omni-Channel, Entitlements, Milestones(you need to know the features, the general bunch of tools, how and why it works exactly, in which business scenarios it is applicable)
 
-**Opportunity Management: 13%**
+Knowledge, Knowledge Management
 
-**Sales Productivity: 9%**
+Service Console(what can be added and what settings it allows)
 
-**Sales Cloud Analytics: 9%**
+What Case is(a bunch of Communities, Live Agent, Web-to-Case, Email-to-Case, Social Media Cases, Omni-Channels, customers SLA’s, Milestones etc.)
 
-**Integration and Data Management: 8%**
+But don't be upset! Super badge is here to help us!
 
-I was preparing for the official trailmix and help. You need to pay attention to the next topics: Territory Management, Person Accounts, Manage Multiple Currencies, Sales Cloud Einstein. You should know the first 3 topics quite deeply, given the features, which we will talk about a little bit later. Sales Cloud Einstein requires an understanding of basic things, such as the main features and their usage. It was these 4 topics that I had most of the questions. But, of course, other topics would also need your attention.
+[Superbadge Service Cloud admin specialist](https://trailhead.salesforce.com/content/learn/superbadges/superbadge-service-cloud-admin-specialist)\
+Passing is highly recommended, as this is one of those super-badges that really reveal all the subtleties of the knowledge gained in a practical aspect. This meansthe skills acquired with a super-badge have a very beneficial effect on the chances of completing the test successfully from the first time.
 
-Now let's move on to the dessert - the questions from the certification itself. Here, some real questions that I met during the certification will be considered. Questions will be slightly changed, but their essence will remain the same.
+It would also be nice to get acquainted with [Field Service Lightning](https://trailhead.salesforce.com/en/content/learn/modules/field_service_basics). Yes, this is a completely different certification.But the questions related to this Field Service chapter from your Salesforce pathway occur very often at the Service Cloud exam (based on a practical experience of passing Service Cloud certification).Know theenemysubject better BEFORE the actual exam. After - it may turn out to be more expensive (not figuratively).
 
-1. Company wants to implement a process to determine which current leads have the most in common with leads that have been converted before? How a company can to do that?
+Examples of questions:
 
-a) Use Einstein Lead Scoring \
-\
-b) Create a Lead Rollup Summary Field
+1. Knowledge articles migration lifecycle:
 
-c) Create a joined report
+* plan prepare test execute validate
+* prepare plan execute test validate
+* plan prepare validate execute test
+* prepare validate plan execute test
 
-d) Use Lead Conversion Reporting.
+Any migration (and not only) at the very beginning should go through the planning stage, then, in accordance with an existing plan, preparations should be made (for example, standardization of existing articles), thentest upload with checking results and fixing bugs, then production upload with validation.
 
-According to official help: ”*Einstein analyzes your past leads, including any custom fields, to determine which current leads have the most in common with leads that have previously converted.*” So, the the correct answer is - а) Use Einstein Lead Scoring.
+2. What method can be used to route cases from social channels?
 
-2. Which roll-up summary fields are supported between objects, when enabling Advanced Currency Management?
+* Social Network Profile + workflow rules on contact
+* Social Network Profile + assignment rules on case
+* Enable Social Customer Service + assignment rules on the case object.
+* Twitter-to-case + workflow rules on case
 
-a) Opportunity object to Account in the default currency of the user’s manager.
+The broadest coverage of social channels is with Social Customer Service.
 
-b) Campaign object to Opportunity object.
+3. Support agents must not take ownership on new cases personally and cases must be assigned in order they come to Service-centre and not overflow agents, how to implement:
 
-с) Opportunity line object to Product object in the default currency of the org.
+* Omni-chanel + least active case distribution
+* Omni-chanel + most available case distribution
+* Queues + assignment rules
+* Queues + workflow rules
 
-d) Opportunity line object to Opportunity object.\
-\
-According to official documentation: «*For example, roll-up summary fields are supported from an opportunity line item object to its opportunity object, because both are advanced currency management enabled.*»\
-So, the correct answer is - d) Opportunity line object to Opportunity object.
+Without custom starship-building, our beloved Queues do not allow us to evaluate the agent’s workload, not to disturb him over trifles like personal clicks on changing ownership, but in Omni-Chanel this hyperdrive was laid down initially + see [Omni-Chanel routing models.](https://help.salesforce.com/articleView?id=service_presence_routing_options.htm&type=5)
 
-3. Company wants to implement Territory Management. The main idea – organizing Territories based on their characteristics.\
-How to do that?
+5. After implementation and configuration of chat for customer community, employee users can’t see chat button in footer of Service console:
 
-a) Create a Territory Model with Territory Hierarchy and set allocations b) Create Territory Types with priority and then create а Territory based on Territory Types.
-
-с) Create a Territory Hierarchy and set allocations and assignments.
-
-d) Create a Territory Management Model with Territory Hierarchy and with priority.
-
-When you create a territory, you select a territory type from the Territory Type lookup field.We also can look and set its priority through Territory Type.Therefore, the correct solution to this requirement is first to create Territory Types with priority, and only then create a Territory and bind it to the desired Territory Type with the corresponding priority.
-
-The correct answer is b) Create Territory Types with priority and then create a Territory based on Territory Types.
-
-4. Company has a lot of duplicate Person Accounts. How developer can merge them?
-
-a) Person Accounts can be merged only with other Person Accounts\
-\
- b) Person Accounts can be merged automatically by enabling the option in Account Setup
-
-c) Person Accounts can be merged with Contact
-
-d) Person Accounts can be merged with any object
-
-And here again we turn to the official documentation : «*As with merging other kinds of records, person accounts can be merged only with other person accounts*.»\
-So, the correct answer is - а) Person Accounts can be merged only with other Person Accounts
-
-5. Choose 3 considerations about Kanban view.
-
-a) Kanban view can display rollup summaries for currency fields
-
-b) Kanban view can summarize records by currency fields
-
-c) Kanban view shows amounts in the user’s currrency
-
-d) Kanban view can show a maximum of 200 records
-
-e) Kanban сards can show up to 10 fields.\
-\
-Accorging to official help: “*The Kanban view displays a maximum of 200 cards. Kanban cards display a maximum of four fields. If you’ve enabled multiple currencies, the Kanban view displays amounts in the user’s currency. Summaries can be created only for numeric and currency fields that aren’t roll-up summary or formula fields.*” So, correct answers are:
-
-b) Kanban view can summarize records by currency fields
-
-c) Kanban view shows amounts in the user’s currrency
-
-d) Kanban view can show a maximum of 200 records.
-
-Here is a brief summary of what awaits you at the certification. For me, it turned out to be one of the most difficult, so you should definitely not underestimate its complexity. In the end, I would like to advise you to read the questions carefully, because they often already contain the answer. \
-\
-I hope this short review will help you pass this certification successfully!
+* add permission set for visibility of chat accept button and assign it to employee users;
+* add permission set for chat using and assign it to employee users;
+* assign users to chat Public groups
+* assign chat feature licenses to users\
+  (Let's just leave [it](https://help.salesforce.com/articleView?id=live_agent_create_users.htm&type=0) here)
