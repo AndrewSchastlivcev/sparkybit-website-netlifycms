@@ -6,6 +6,7 @@ import Footer from "../components/footer/";
 import useSiteMetadata from "./SiteMetadata";
 
 import "../styles/index.scss";
+const URL = process.env.GATSBY_SITE_URL || 'https://sparkybit.com/'
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -16,7 +17,7 @@ const TemplateWrapper = ({ children }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="msapplication-config" content="/static/browserconfig.xml" />
-        <link rel="canonical" href="https://sparkybit.com/" />
+        <link rel="canonical" href={URL} />
       </Helmet>
 
       <div className="w1">
