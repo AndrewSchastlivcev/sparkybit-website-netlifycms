@@ -5,7 +5,7 @@ date: 2020-03-25T11:29:27.855Z
 featuredpost: true
 featuredimage: /img/salesforce.png
 tags:
-  - saleforce
+  - salesforce
 ---
 Hello, reader!
 
