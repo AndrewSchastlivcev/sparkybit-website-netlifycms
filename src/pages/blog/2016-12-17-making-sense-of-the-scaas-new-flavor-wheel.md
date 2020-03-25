@@ -13,7 +13,7 @@ tags:
 
 As technology advances in this digital age, with exciting developments coming thick and fast, many associate the forefront of innovation with Silicon Valley and the tech giants that dominate the global headlines. There are innovations happening around the world, but, when it comes to outsourcing, many of these hubs are overlooked.
 
-One such[tech ecosystem is Ukraine](http://data.unit.city/tech-guide/Tech_Ecosystem_Guide_To_Ukraine_En.pdf). Making $3.6bn worth of IT exports in 2017 (that’s a significant 3.4% of its GDP), it’s a global tech hub that is, however, sometimes overlooked for some of the larger tech hubs around the world. With 4,000 thriving tech companies in Ukraine, there are many reasons that organisations should consider Ukraine for outsourcing expertise.
+One such [tech ecosystem is Ukraine](http://data.unit.city/tech-guide/Tech_Ecosystem_Guide_To_Ukraine_En.pdf). Making $3.6bn worth of IT exports in 2017 (that’s a significant 3.4% of its GDP), it’s a global tech hub that is, however, sometimes overlooked for some of the larger tech hubs around the world. With 4,000 thriving tech companies in Ukraine, there are many reasons that organisations should consider Ukraine for outsourcing expertise.
 
 #### 1/ A Trusted Choice
 
@@ -35,6 +35,6 @@ Hearing of these ecosystems at the forefront of technological innovation, it’s
 
 2018 saw $290m in start-up investments and Ukraine is currently ranked 43rdout of 126 countries on the Global Innovation Index. The talent in the country is indisputably the reason behind this, as the software and technology specialists in training begin to open cutting edge start-ups that thrive in Ukraine.
 
-With some of the top tech institutions in the world, such as the National Technical University of Ukraine in Kyiv,[National University of Ukraine in Dnipro](http://www.dnu.dp.ua/en)and[in Kharkov](http://www.univer.kharkov.ua/en), providing a supply of 40,000 specialists across the country each year, now is the time for organisations to tap into that supply chain. Ukraine is no longer a country to be overlooked – it deserves recognition as one of the centres of outsourcing expertise and companies around the globe must start utilising that top tech talent.
+With some of the top tech institutions in the world, such as the National Technical University of Ukraine in Kyiv, [National University of Ukraine in Dnipro](http://www.dnu.dp.ua/en) and [in Kharkov](http://www.univer.kharkov.ua/en), providing a supply of 40,000 specialists across the country each year, now is the time for organisations to tap into that supply chain. Ukraine is no longer a country to be overlooked – it deserves recognition as one of the centres of outsourcing expertise and companies around the globe must start utilising that top tech talent.
 
 <!--EndFragment-->
