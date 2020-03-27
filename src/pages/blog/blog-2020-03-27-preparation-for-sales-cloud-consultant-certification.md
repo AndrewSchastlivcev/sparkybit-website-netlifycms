@@ -9,18 +9,15 @@ tags:
 ---
 Hello, reader!
 
-In this article we will focus on preparing for one of the most popular certifications for western market: **Sales Cloud Consultant**. Let's take a brief look at what Sales Cloud is and why this certification is considered one of the most relevant by western recruiting sites.
-
+In this article we will focus on preparing for one of the most popular certifications for western market: **Sales Cloud Consultant**. Let's take a brief look at what Sales Cloud is and why this certification is considered one of the most relevant by western recruiting sites.\
 \
-**Salesforce Sales Cloud** is an online system for managing business processes, customer relations, analytics, marketing and sales. Salesforce developers understand that for successful sales it’s not enough to have good management - you need a large-scale CRM system that works on any device with convenient access to Chatter, CRM, custom applications and the entire flow of business processes. The service allows you to create and configure any applications, deploy the necessary functionality and manage the company's budget.
-
+**Salesforce Sales Cloud** is an online system for managing business processes, customer relations, analytics, marketing and sales. Salesforce developers understand that for successful sales it’s not enough to have good management - you need a large-scale CRM system that works on any device with convenient access to Chatter, CRM, custom applications and the entire flow of business processes. The service allows you to create and configure any applications, deploy the necessary functionality and manage the company's budget.\
 \
 According to the product description, it becomes clear why Sales Cloud certification has a high value in the western market. Knowledge in this area will allow you to manage it and be a sought-after specialist. A prerequisite is a condition of having an admin certificate.\
 \
 Now let's actually proceed to the preparation for certification. \
 In my case, preparation for the exam took about 1 month of real time.\
-The Salesforce Sales Cloud Consultant exam measures candidate’s knowledge and skills related to the following objectives. A candidate should have hands-on experience implementing Sales Cloud solutions and have demonstrated the application of each of the features/functions below:
-
+The Salesforce Sales Cloud Consultant exam measures candidate’s knowledge and skills related to the following objectives. A candidate should have hands-on experience implementing Sales Cloud solutions and have demonstrated the application of each of the features/functions below:\
 \
 Industry Knowledge: 7%
 
