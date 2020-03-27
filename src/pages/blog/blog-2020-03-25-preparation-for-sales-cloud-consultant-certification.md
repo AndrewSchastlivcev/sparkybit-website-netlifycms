@@ -53,7 +53,7 @@ It would also be nice to get acquainted with [Field Service Lightning](https://t
 
 Examples of questions:
 
-1. **Knowledge articles migration lifecycle:**
+**1. Knowledge articles migration lifecycle:**
 
 * **plan prepare test execute validate**
 * prepare plan execute test validate
@@ -62,7 +62,7 @@ Examples of questions:
 
 Any migration (and not only) at the very beginning should go through the planning stage, then, in accordance with an existing plan, preparations should be made (for example, standardization of existing articles), then test upload with checking results and fixing bugs, then production upload with validation.
 
-2. **What method can be used to route cases from social channels?**
+**2. What method can be used to route cases from social channels?**
 
 * Social Network Profile + workflow rules on contact
 * Social Network Profile + assignment rules on case
@@ -71,7 +71,7 @@ Any migration (and not only) at the very beginning should go through the plannin
 
 The broadest coverage of social channels is with Social Customer Service.
 
-3. **Support agents must not take ownership on new cases personally and cases must be assigned in order they come to Service-centre and not overflow agents, how to implement:**
+**3. Agents must not take ownership on new cases personally and cases must be assigned in order they come to Service-centre and not overflow agents, how to implement:**
 
 * Omni-chanel + least active case distribution
 * **Omni-chanel + most available case distribution**
@@ -80,7 +80,7 @@ The broadest coverage of social channels is with Social Customer Service.
 
 Without custom starship-building, our beloved Queues do not allow us to evaluate the agent’s workload, not to disturb him over trifles like personal clicks on changing ownership, but in Omni-Chanel this hyperdrive was laid down initially + see [Omni-Chanel routing models.](https://help.salesforce.com/articleView?id=service_presence_routing_options.htm&type=5)
 
-5. **After implementation and configuration of chat for customer community, employee users can’t see chat button in footer of Service console:**
+**4. After implementation and configuration of chat for customer community, employee users can’t see chat button in footer of Service console:**
 
 * add permission set for visibility of chat accept button and assign it to employee users;
 * add permission set for chat using and assign it to employee users;
