@@ -3,11 +3,10 @@ templateKey: about-us-page
 section_1_title: About us
 section_1_content: >-
   Sparkybit is the creation of Alexey Nayda, an entrepreneur born and raised in
-  the Ukraine. It has been his passion to work with clients to develop that
-  ‘spark’ which drives them, by developing the software that drives their
-  enterprise forward.  Sparkybit’s mission is to challenge the current world of
-  IT services by empowering clients with solutions tailored specifically to
-  their business.
+  Ukraine. It has been his passion to work with clients to develop that ‘spark’
+  which drives them, by developing the software that drives their enterprise
+  forward.  Sparkybit’s mission is to challenge the current world of IT services
+  by empowering clients with solutions tailored specifically to their business.
 section_1_image: /img/about_us.jpg
 section_2_text: >-
   We recognise that at times clients need external resource, and require
