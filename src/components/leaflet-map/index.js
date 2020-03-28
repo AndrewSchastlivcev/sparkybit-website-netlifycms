@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { isBrowser } from "../../utils/helpers";
+import { v4 } from "uuid";
 
 export default class LeafletMap extends Component {
 
@@ -41,7 +42,7 @@ export default class LeafletMap extends Component {
           {country.offices.map(o => {
             return (
               <Marker
-                key={o.office}
+                key={v4()}
                 position={[o.latitude_office, o.longitude_office]}
               >
                 <Popup>Hello from {o.office}!</Popup>

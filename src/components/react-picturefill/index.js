@@ -1,6 +1,7 @@
 // Slightly modified react-responsive-picture
 // https://github.com/braposo/react-responsive-picture
 import React, { Component } from "react"
+import { v4 } from "uuid";
 
 const isPictureFillNeeded =
   typeof window !== "undefined" &&
@@ -44,7 +45,7 @@ export default class Picture extends Component {
 
       return (
         <source
-          key={`sources-${index}`}
+          key={v4()}
           srcSet={source.srcSet}
           media={source.media}
           type={source.type}

@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import PostPreviewImg from "../img/blog/default-preview.jpg";
 import Img from "gatsby-image/withIEPolyfill";
 import { kebabCase } from "lodash";
+import { v4 } from "uuid";
 
 class TagRoute extends Component {
   render() {
@@ -23,7 +24,7 @@ class TagRoute extends Component {
               <hr />
               {posts &&
                 posts.map(({ node: post }) => (
-                  <div key={post.id} className="post-block">
+                  <div key={v4()} className="post-block">
                     <div className="preview-block">
                       {post.frontmatter.featuredimage ? (
                         <Img
@@ -46,7 +47,7 @@ class TagRoute extends Component {
                       <div className="category-list">
                         {post.frontmatter.tags.map((category, index) => (
                           <Link
-                            key={category + `-${index}`}
+                            key={v4()}
                             to={`/tags/${kebabCase(category)}`}
                           >
                             <span className="post-category">{category}</span>

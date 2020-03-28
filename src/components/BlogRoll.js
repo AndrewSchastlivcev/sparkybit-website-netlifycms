@@ -4,6 +4,7 @@ import { Link, graphql, StaticQuery } from "gatsby";
 import PostPreviewImg from "../img/blog/default-preview.jpg";
 import Img from "gatsby-image/withIEPolyfill";
 import SEO from "../components/seo/index";
+import { v4 } from "uuid";
 
 class BlogRoll extends React.Component {
   render() {
@@ -22,7 +23,7 @@ class BlogRoll extends React.Component {
               <hr />
               {posts &&
                 posts.map(({ node: post }) => (
-                  <div key={post.id} className="post-block">
+                  <div key={v4()} className="post-block">
                     <div className="preview-block">
                       {post.frontmatter.featuredimage ? (
                         <Img
