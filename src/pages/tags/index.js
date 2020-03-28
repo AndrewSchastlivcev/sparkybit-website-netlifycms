@@ -3,6 +3,7 @@ import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../../components/Layout'
+import { v4 } from "uuid";
 
 const TagsPage = ({
   data: {
@@ -24,7 +25,7 @@ const TagsPage = ({
             <h1 className="title is-size-2 is-bold-light">Tags</h1>
             <ul className="taglist">
               {group.map(tag => (
-                <li key={tag.fieldValue}>
+                <li key={v4()}>
                   <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
                     {tag.fieldValue} ({tag.totalCount})
                   </Link>

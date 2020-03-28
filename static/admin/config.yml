@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  # branch: master
+  # site_url: ${GATSBY_SITE_URL}
   branch: master
   commit_messages:
     create: "Create {{collection}} “{{slug}}”"
@@ -15,6 +15,7 @@ public_folder: /img
 collections:
   - name: "careers"
     label: "Careers"
+    description: "Section with actual vacancy's. Press 'new Career' to add new vacancy"
     folder: "src/pages/careers"
     create: true
     identifier_field: "career ident"
@@ -42,6 +43,7 @@ collections:
 
   - name: "blog"
     label: "Blog"
+    description: "Section with actual posts. Press 'new Blog' to add new post"
     folder: "src/pages/blog"
     create: true
     slug: "blog-{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -62,6 +64,7 @@ collections:
 
   - name: "pages"
     label: "Pages"
+    description: "Section with static pages of web site. Choose one of pages for edit content"
     files:
       - file: "src/pages/index.md"
         label: "Home Page"

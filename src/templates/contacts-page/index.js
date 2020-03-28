@@ -8,6 +8,7 @@ import IconTel from "../../../src/img/icon-tel.svg";
 import LeafletMap from "../../components/leaflet-map/index.js";
 import ModalContact from "../../components/modal-contact";
 import SEO from "../../components/seo/index";
+import mapCover from "../../img/contact/mapCover.png"
 
 import "./styles/index.scss";
 
@@ -36,12 +37,13 @@ export class ContactsPageTemplate extends Component {
   render() {
     const { isModalOpen } = this.state;
     const { setModalState, handleFormSubmit } = this;
+    const isMapCover = this.props.mapCover || false
     const {
       contact_title,
       contact_email,
       contact_phone,
       btn_name,
-      countriesList
+      countriesList,
     } = this.props;
     return (
       <>
@@ -77,12 +79,20 @@ export class ContactsPageTemplate extends Component {
                 </button>
               </div>
             </div>
-            <div className="map">
-              <LeafletMap
-                country={this.state.country}
-                getCountry={this.setCountry}
-              />
-            </div>
+            { !isMapCover
+              ? (<div className="map">
+                  <LeafletMap
+                    country={this.state.country}
+                    getCountry={this.setCountry}
+                  /></div>)
+              : (<div>
+                  <img
+                  style={{display: 'block', margin: 'auto'}}
+                  src={mapCover}
+                  alt='cover map'
+                  />
+                </div>)
+            }
             <div className="circle circle-1" />
             <div className="circle circle-2" />
             <div className="circle circle-3" />

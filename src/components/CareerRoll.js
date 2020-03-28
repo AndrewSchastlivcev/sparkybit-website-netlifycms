@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, graphql, StaticQuery } from "gatsby";
 import SEO from "../components/seo/index";
+import { v4 } from "uuid";
 
 class CareerRoll extends React.Component {
   render() {
@@ -33,7 +34,7 @@ class CareerRoll extends React.Component {
               <hr />
               {careers &&
                 careers.map(({ node: career }) => (
-                  <div className="vacancy-block" key={career.id}>
+                  <div className="vacancy-block" key={v4()}>
                     <div className="content-block">
                       <div className="vacancy-list">
                         <div className="vacancy-wrap-right">
@@ -46,7 +47,7 @@ class CareerRoll extends React.Component {
                             <div className="vacancy-location">
                               {career.frontmatter.cities.map(city => {
                                 return (
-                                  <span className="vacancy-city" key={city}>
+                                  <span className="vacancy-city" key={v4()}>
                                     {city}
                                   </span>
                                 );

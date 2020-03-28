@@ -9,6 +9,7 @@ require("dotenv").config({
   path: `.env.${activeEnv}`
 });
 console.log('\x1b[33m%s\x1b[0m', `>>> Using environment config: '${activeEnv}'`);
+console.log('\x1b[36m%s\x1b[0m', `*** Site URL: ${process.env.GATSBY_SITE_URL}`);
 
 module.exports = {
   pathPrefix: config.pathPrefix === "" ? "/" : config.pathPrefix,
@@ -137,8 +138,10 @@ module.exports = {
     {
       resolve: "gatsby-plugin-netlify-cms",
       options: {
-        modulePath: `${__dirname}/src/cms/cms.js`
-      }
+        modulePath: `${__dirname}/src/cms/cms.js`,
+        enableIdentityWidget: true,
+        htmlFavicon: `${__dirname}/src/img/favicon-16x16.png`
+        }
     },
     "gatsby-plugin-netlify" // make sure to keep it last in the array
   ]

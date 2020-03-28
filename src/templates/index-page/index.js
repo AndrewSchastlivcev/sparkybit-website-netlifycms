@@ -166,16 +166,10 @@ export class IndexPageTemplate extends Component {
                 <h1 className="striped uppercase">{section_3_title}</h1>
                 <p>{section_3_text}</p>
                 <div className="technologies">
-                  {/* {!!section_3_image_desktop.childImageSharp ? (
-                    <Img
-                      fluid={section_3_image_desktop.childImageSharp.fluid}
-                      alt={section_3_title}
-                      fadeIn={true}
-                    />
-                  ) : (
+                  {!section_3_image_desktop.childImageSharp ? (
                     <img src={section_3_image_desktop} alt={section_3_title} />
-                  )} */}
-                  <Picture
+                  ) : (
+                    <Picture
                       sources={[
                         {
                           type: "image/webp",
@@ -207,6 +201,8 @@ export class IndexPageTemplate extends Component {
                           .fluid.src
                       }
                     />
+                  )}
+                  
                 </div>
               </div>
             </section>
