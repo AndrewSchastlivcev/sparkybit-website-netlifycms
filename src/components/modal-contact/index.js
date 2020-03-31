@@ -20,8 +20,8 @@ export default class ModalContact extends Component {
             contactFields={{
               email: "",
               /* city: "", */
-              name: "",
-              phone: "",
+              /* name: "", */
+              /* phone: "", */
               message: "",
               // recaptcha: "",
               closeHandler: null

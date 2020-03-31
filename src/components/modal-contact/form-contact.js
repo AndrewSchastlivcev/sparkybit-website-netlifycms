@@ -37,7 +37,7 @@ export const contactForm = props => {
       {...(values.closeHandler = actionSubmit)}
     >
       <div className="modal-fields">
-        <TextInput
+        {/* <TextInput
           name="name"
           id="name"
           type="text"
@@ -47,7 +47,7 @@ export const contactForm = props => {
           value={values.name}
           onChange={handleChange}
           onBlur={handleBlur}
-        />
+        /> */}
 
         {/*   <TextInput
           name="city"
@@ -61,7 +61,7 @@ export const contactForm = props => {
           onBlur={handleBlur}
         /> */}
 
-        <TextInput
+        {/* <TextInput
           name="phone"
           id="phone"
           type="text"
@@ -71,7 +71,7 @@ export const contactForm = props => {
           value={values.phone}
           onChange={handleChange}
           onBlur={handleBlur}
-        />
+        /> */}
 
         <TextInput
           name="email"
