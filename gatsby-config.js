@@ -22,9 +22,6 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-react-helmet",
-    {
-      resolve: `gatsby-plugin-recaptcha`
-    },
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-plugin-purgecss", // purges all unused/unreferenced css rules
