@@ -19,7 +19,7 @@ description: >-
 • design and software development skills;\
 • good knowledge of C ++, STL, multithreading;\
 • knowledge of cmake, boost;\
-• network programming experience (knowledge of BitTorrent will be a plus);\
+• network programming experience;\
 • understanding of general data structures and complexity of algorithms;\
 • experience with Linux and Windows;\
 • ability to work as part of a distributed team;\
@@ -46,8 +46,6 @@ IN ADDITION TO INTERESTING TASKS, WE ALSO OFFER:
 
 The interview will take place in two stages (both in Russian): the first is a technical pre-interview; the second is technical with the team lead of the command.
 
-
-
 #### Responsibilities
 
 • develop key products of the company in C ++ and Go;\
@@ -58,7 +56,5 @@ The interview will take place in two stages (both in Russian): the first is a te
 #### About project
 
 Our client creates cybersecurity solutions and data warehouses in a hybrid cloud in the form of innovative solutions for backup, protection against ransomware, disaster recovery, data storage, as well as synchronization and sharing of corporate data.
-
-
 
 <!--EndFragment-->
