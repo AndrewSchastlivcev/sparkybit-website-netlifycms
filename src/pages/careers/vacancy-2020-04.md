@@ -3,7 +3,6 @@ templateKey: career-post
 title: C++ Developer
 cities:
   - Dnipro
-  - Kharkiv
 date: 2020-04-09T13:36:48.030Z
 description: >-
   Our client creates cybersecurity solutions and data warehouses in a hybrid
