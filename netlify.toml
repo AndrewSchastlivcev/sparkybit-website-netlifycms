@@ -1,9 +1,9 @@
 [build]
   publish = "public"
   command = "npm run build"
-  functions = "lambda"
+  #functions = "lambda"
 [build.environment]
   YARN_FLAGS = "--no-ignore-optional" 
   NODE_ENV = "production"
-  NODE_VERSION = "12.16.1"
-  YARN_VERSION = "1.22.0"
+  NODE_VERSION = "12.16.2"
+  YARN_VERSION = "1.22.4"

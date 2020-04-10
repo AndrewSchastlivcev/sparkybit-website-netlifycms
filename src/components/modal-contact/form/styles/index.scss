@@ -1,0 +1,121 @@
+  @import "../../../../styles/sparkybit/variables";
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+.modal-contact-form {
+  max-width: 500px;
+  padding: 25px;
+
+  label {
+    display: block;
+    color: $color-main;
+    font-size: 12px;
+    margin-bottom: 5px;
+    
+  }
+
+  input {
+    color: $color-main;
+    padding: 0.5rem;
+    font-size: 16px;
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+      &:focus {
+        border-color: #007eff;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+          0 0 0 3px rgba(0, 126, 255, 0.1);
+        outline: none;
+      }
+      &.error {
+        border-color: $error-color;
+      }
+      &::placeholder {
+        color: $color-main;
+        opacity: 0.3;
+      }
+
+  }
+
+  textarea {
+    padding: 0.5rem;
+    font-size: 16px;
+    color: $color-main;
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    min-height: 100px;
+      &:focus {
+        border-color: #007eff;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+          0 0 0 3px rgba(0, 126, 255, 0.1);
+        outline: none;
+      }
+      &.error {
+        border-color: $error-color;
+      }
+      &::placeholder {
+        color: $color-main;
+        opacity: 0.3;
+      }
+  }
+
+  .input-feedback {
+    color: $error-color;
+    font-size: 10px;
+    // margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 12px;
+    // color: black;
+    text-align: center;
+    border: 1px solid $color-gray;
+    margin: 0;
+    padding: 10px;
+    border-radius: 6px;
+    a {
+      color: $color-link;
+    }
+  }
+
+  .modal-field{
+    margin-bottom: 15px;
+  }
+
+  .modal-control {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 15px 0;
+    @media screen and (max-width: $breakpoint-mobile-max) {
+      justify-content: center;
+      flex-wrap: wrap;
+      .submitBtn {
+        margin-bottom: 20px;
+        width: 100%;
+      }
+    }
+  }
+
+  .submitBtn {
+    width: 200px;
+    display: block;
+    margin: 0 2px;
+  }
+
+  .submitBtn:focus {
+    box-shadow: inset 0 4px 1px rgba(0, 0, 0, 0.075),
+      0 0 0 4px rgba(0, 126, 255, 0.1);
+    outline: none;
+  }
+  
+  button:disabled {
+    opacity: 0.5;
+    // cursor: not-allowed !important;
+  }  
+}  

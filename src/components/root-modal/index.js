@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import 'react-responsive-modal/styles.css';
 import Modal from "react-responsive-modal";
 import classNames from "classnames";
 
