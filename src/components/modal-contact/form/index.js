@@ -1,5 +1,5 @@
 // Helper styles for demo
-import "./modal.scss";
+import "./styles/index.scss";
 
 import React from "react";
 import { Formik } from "formik";
@@ -22,8 +22,7 @@ const authToken = process.env.GATSBY_AUTHORIZATION_KEY || null;
 // const hostport = process.env.WEBHOOK_SERVER_PORT || 5454;
 // const url = `${protocol}${host}:${hostport}${endpoint}`;
 
-const request = () => {
-  // console.log("payload", payload);
+const request = (values) => {
   function isCareersUrl() {
     if (window.location.pathname.search("careers") !== -1) {
       return url_vacancy;
@@ -32,7 +31,9 @@ const request = () => {
     }
   }
   const url = isCareersUrl();
-  let data = /* JSON.stringify  payload;*/ null
+  const { email, message } = values
+  const payload = { email, message }  
+  let data = payload /* JSON.stringify  payload;*/
   if (data) {
     axios({
       method: "POST", //you can set what request you want to be
@@ -43,17 +44,21 @@ const request = () => {
         "Content-Type": "application/json"
       }
     });
-  } 
+  } else {
+    console.error('payload data error', data)
+  }  
 }
 
-export const form = () => (
+export const form = (onClose) => (
   <GoogleReCaptchaProvider reCaptchaKey={ captchaKey }>
     <Formik
       initialValues={{ email: "", message: "", captcha: "" }}
       initialTouched={{ captcha: true }}
       onSubmit={async values => {
-        await new Promise(resolve => setTimeout(resolve, 500));
-        alert(JSON.stringify(values, null, 2));
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        // alert(JSON.stringify(values, null, 2));
+        await request(values);
+        onClose(false);
       }}
       validationSchema={Yup.object().shape({
         email: Yup.string()
@@ -81,7 +86,6 @@ export const form = () => (
         } = props;
         return (
           <div>
-            {console.log("prpos", props)}
             <form 
               onSubmit={handleSubmit}
               method="POST"

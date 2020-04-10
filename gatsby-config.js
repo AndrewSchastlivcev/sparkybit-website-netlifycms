@@ -28,7 +28,7 @@ module.exports = {
       options: {
         develop: true, // Activates purging in npm run develop
         purgeOnly: ["styles/", "templates/"], // applies purging only on the bulma css file
-        ignore: ["templates/contacts-page"]
+        ignore: ["templates/contacts-page", "components/modal-contact/form/"]
       }
     }, // must be after other CSS plugins
     {

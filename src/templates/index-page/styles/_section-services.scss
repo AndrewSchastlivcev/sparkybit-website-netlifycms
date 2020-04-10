@@ -58,7 +58,7 @@
         &.salesforce {
           .circle {
             &.circle-1 {
-              display: block;
+              display: none;
               top: 35px;
               left: 0;
             }
@@ -75,7 +75,7 @@
         &.bespoke {
           .circle {
             &.circle-1 {
-              display: block;
+              display: none;
               top: 120px;
               right: 45px;
             }
